@@ -1,0 +1,50 @@
+<h2 mat-dialog-title>Catastrophe Naturelle</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="form">    
+      <mat-form-field  >
+        <mat-label style="font-size: 12pt;">Vitesse:</mat-label>
+        <select matNativeControl formControlName="vitesse" >
+              <option></option>
+              <option value="Maitrisée">Maitrisée</option>
+              <option value="Lente">Lente </option>
+              <option value="Rapide">Rapide </option>
+            </select>
+    </mat-form-field><br>
+    <mat-form-field >
+      <mat-label style="font-size: 12pt;">Fréquence:</mat-label>
+      <select matNativeControl formControlName="frequence" >
+            <option></option>
+            <option value="Récurrente">Récurrente</option>
+            <option value="Non récurrente">Non récurente </option>
+          </select>
+  </mat-form-field><br>
+  <mat-form-field >
+    <mat-label style="font-size: 12pt;">Ampleur:</mat-label>
+    <select matNativeControl formControlName="ampleur" >
+          <option></option>
+          <option value="Départementale">Départementale</option>
+          <option value="Nationale">Nationale </option>
+        </select>
+</mat-form-field><br>
+<mat-form-field >
+  <mat-label style="font-size: 12pt;">Niveau Contrôle:</mat-label>
+  <select matNativeControl formControlName="niveaucontrole" >
+        <option></option>
+        <option value="sous contrôle">sous contrôle</option>
+        <option value="hors contrôle">hors contrôle </option>
+      </select>
+</mat-form-field><br>
+<mat-form-field >
+  <mat-label style="font-size: 12pt;">Niveau de perte:</mat-label>
+  <select matNativeControl formControlName="niveauperte" >
+        <option></option>
+        <option value="Matériel">Matériel</option>
+        <option value="Matériel & Humain">Matériel & Humain</option>
+      </select>
+</mat-form-field>
+</form> 
+</mat-dialog-content>
+<mat-dialog-actions >
+  <button mat-button mat-dialog-close class="btn-danger" >quitter</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addCatastropheNaturelle()" class="btn-success">géner la fiche</button>
+</mat-dialog-actions>

@@ -1,0 +1,139 @@
+<!-- <button mat-raised-button style="margin-left: 33%;" (click)="isEditable = !isEditable">
+    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+  </button> -->
+  <!-- 
+  <mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Crise Naturelle</ng-template>
+        <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+        <mat-form-field  >
+            <mat-label style="font-size: 12pt;">Vitesse  * :</mat-label>
+            <select matNativeControl formControlName="vitesse" >
+                  <option></option>
+                  <option value="Maitrisée">Maitrisée</option>
+                  <option value="Lente">Lente </option>
+                  <option value="Rapide">Rapide </option>
+                </select>
+        </mat-form-field>
+        <div >
+         
+          <button  mat-button matStepperNext (click)="newfrequence()" 
+          class="btn btn-info" >suivant</button>
+     
+        </div>
+      </form>
+    </mat-step> -->
+    <!-- <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Crise Naturelle</ng-template>
+        <mat-form-field >
+            <mat-label style="font-size: 12pt;">Fréquence:</mat-label>
+            <select matNativeControl formControlName="frequence" >
+                  <option></option>
+                  <option value="Récurrente">Récurrente</option>
+                  <option value="Non récurrente">Non récurente </option>
+                  
+                </select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious style="margin-left: 2%;" class="btn-danger">retour</button>
+          <button mat-button matStepperNext  style="margin-left: 1%;" class="btn btn-info">suivant</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="threeFormGroup" [editable]="isEditable">
+        <form [formGroup]="threeFormGroup">
+          <ng-template matStepLabel>Crise Naturelle</ng-template>
+          <mat-form-field >
+              <mat-label style="font-size: 12pt;">Ampleur:</mat-label>
+              <select matNativeControl formControlName="ampleur" >
+                    <option></option>
+                    <option value="Départementale">Départementale</option>
+                    <option value="Nationale">Nationale </option>
+                  </select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious style="margin-left: 2%;" class="btn-danger">retour</button>
+          <button mat-button matStepperNext  style="margin-left: 1%;" class="btn btn-info">suivant</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="fourFormGroup" [editable]="isEditable">
+        <form [formGroup]="fourFormGroup">
+          <ng-template matStepLabel>Crise Naturelle</ng-template>
+          <mat-form-field >
+              <mat-label style="font-size: 12pt;">Niveau Contrôle:</mat-label>
+              <select matNativeControl formControlName="niveaucontrole" >
+                    <option></option>
+                    <option value="sous contrôle">sous contrôle</option>
+                    <option value="hors contrôle">hors contrôle </option>
+                  </select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious style="margin-left: 2%;" class="btn-danger">retour</button>
+            <button mat-button matStepperNext  style="margin-left: 1%;" class="btn btn-info">suivant</button>
+            </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="fiveFormGroup" [editable]="isEditable">
+        <form [formGroup]="fiveFormGroup">
+          <ng-template matStepLabel>Crise Naturelle</ng-template>
+          <mat-form-field >
+              <mat-label style="font-size: 12pt;">Niveau de perte:</mat-label>
+              <select matNativeControl formControlName="niveauperte" >
+                    <option></option>
+                    <option value="Matériel">Matériel</option>
+                    <option value="Matériel & Humain">Matériel & Humain</option>
+                  </select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious style="margin-left: 2%;" class="btn-danger">retour</button>
+            <button mat-button matStepperNext  style="margin-left: 1%;" class="btn btn-info">suivant</button>
+              </div>
+        </form>
+      </mat-step>
+    <mat-step>   
+      <ng-template matStepLabel>Terminer</ng-template>
+      <p>Vous avez maintenant terminé.</p>
+      <div style="margin-left: 2%; margin-top: 7%;">
+        <button mat-button matStepperPrevious class="btn-info" style="margin-left: 1;">retour</button>
+        <button  mat-button type="submit" (click)="ficheaction()" class="btn-success" style="margin-left: 1%;">Recapitulatif</button>
+        <button mat-button (click)="stepper.reset()" class="btn-danger" style="margin-left: 1%;">annuler</button>
+      </div>
+    </mat-step>
+   -->
+  <!-- </mat-horizontal-stepper>
+   -->
+
+   
+<div class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+  <div class="card" >
+    <div class="card-header">
+     
+      <h1>Crise Naturelle</h1>
+    </div>
+    <div class="card-body" >
+      <form [formGroup]="firstFormGroup">
+        <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+        <mat-form-field >
+            <mat-label style="font-size: 12pt;">Vitesse  * :</mat-label>
+            <select matNativeControl formControlName="vitesse" >
+                  <option></option>
+                  <option value="Maitrisée">Maitrisée</option>
+                  <option value="Lente">Lente </option>
+                  <option value="Rapide">Rapide </option>
+                </select>
+        </mat-form-field>
+        <div >
+          <button mat-button  class="btn-danger"  [routerLink]="['/accueil']"  >quitter</button>
+          <button  mat-button (click)="newfrequence()" 
+          class="btn btn-info" >suivant</button>
+     
+        </div>
+      </form>
+     
+</div>
+  </div>
+    </div>
+ 

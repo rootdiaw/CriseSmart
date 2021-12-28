@@ -1,0 +1,29 @@
+<div class="animated fadeIn" class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crise Naturelle</h1>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="fourFormGroup">
+              <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+              <mat-form-field >
+                <mat-label style="font-size: 12pt;">Niveau Contrôle *:</mat-label>
+                <select matNativeControl formControlName="niveaucontrole" >
+                      <option></option>
+                      <option value="sous contrôle">sous contrôle</option>
+                      <option value="hors contrôle">hors contrôle </option>
+                    </select>
+            </mat-form-field>
+              <div >
+                <button mat-button  [routerLink]="['/ampl']"  class="btn-danger">retour</button>
+          
+                <button  mat-button (click)="newcontrole()" 
+                class="btn btn-info" >suivant</button>
+           
+              </div>
+            </form>
+           
+      </div>
+             
+            </div>
+   </div>

@@ -1,0 +1,66 @@
+<!-- <button mat-raised-button (click)="isEditable = !isEditable">
+    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+  </button>
+   -->
+
+   <div class="animated fadeIn" class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crise Naturelle</h1>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="secondFormGroup">
+              <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+              <mat-form-field >
+                <mat-label style="font-size: 12pt;">Fréquence * :</mat-label>
+                <select matNativeControl formControlName="frequence" >
+                      <option></option>
+                      <option value="Récurrente">Récurrente</option>
+                      <option value="Non récurrente">Non récurente </option>
+                      
+                    </select>
+            </mat-form-field>
+              <div >
+                <button mat-button  [routerLink]="['/faq']"  class="btn-danger">retour</button>
+          
+                <button  mat-button (click)="newampleur()" 
+                class="btn btn-info" >suivant</button>
+           
+              </div>
+            </form>
+           
+      </div>
+             
+            </div>
+   </div>
+  <!-- 
+      
+<div class="animated fadeIn">
+    <div class="card">
+      <div class="card-header">
+       <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Crise Naturelle</ng-template>
+          <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+          <mat-form-field >
+              <mat-label style="font-size: 12pt;">Fréquence * :</mat-label>
+              <select matNativeControl formControlName="frequence" >
+                    <option></option>
+                    <option value="Récurrente">Récurrente</option>
+                    <option value="Non récurrente">Non récurente </option>
+                    
+                  </select>
+          </mat-form-field>
+          <div style="margin-top: 15%;">
+            <button mat-button matStepperPrevious style="margin-left: 20%;" class="btn-danger">retour</button>
+            <button  mat-button matStepperNext (click)="newampleur()" 
+          class="btn btn-info" style="margin-left: 19%;">suivant</button>
+      </div>
+        </form>
+      </div>
+      
+    </div>
+   
+      </div>
+   
+  
+   -->
