@@ -1,1 +1,33 @@
-<p>new-securitaire works!</p>
+
+   
+<div class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+    <div class="card" >
+      <div class="card-header">
+       
+        <h1>Crise Sécuritaire</h1>
+      </div>
+      <div class="card-body" >
+        <form [formGroup]="firstFormGroup">
+          <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+          <mat-form-field >
+              <mat-label style="font-size: 12pt;">Vitesse  * :</mat-label>
+              <select matNativeControl formControlName="vitesse" >
+                    <option></option>
+                    <option value="Maitrisée">Maitrisée</option>
+                    <option value="Lente">Lente </option>
+                    <option value="Rapide">Rapide </option>
+                  </select>
+          </mat-form-field>
+          <div >
+            <button mat-button style="margin-left: -1%;" class="btn-danger"  [routerLink]="['/accueil']"  >quitter</button>
+            <button  mat-button (click)="newfrequenceSecuritaire()" 
+            class="btn btn-info" >suivant</button>
+       
+          </div>
+        </form>
+       
+  </div>
+    </div>
+      </div>
+   
+  

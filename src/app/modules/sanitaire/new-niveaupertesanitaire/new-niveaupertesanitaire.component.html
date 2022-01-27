@@ -1,0 +1,29 @@
+<div class="animated fadeIn" class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crise Sanitaire</h1>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="fiveFormGroup">
+              <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+              <mat-form-field >
+                <mat-label style="font-size: 12pt;">Niveau de perte *:</mat-label>
+                <select matNativeControl formControlName="niveauperte" >
+                      <option></option>
+                      <option value="Matériel">Matériel</option>
+                      <option value="Matériel & Humain">Matériel & Humain</option>
+                    </select>
+            </mat-form-field>
+              <div >
+                <button mat-button style="margin-left: -3%;" [routerLink]="['/controlesanitaire']"  class="btn-danger">retour</button>
+          
+                <button  mat-button  (click)="newperte()"
+                class="btn btn-info" >Recapitulatif</button>
+           
+              </div>
+            </form>
+           
+      </div>
+             
+            </div>
+   </div>

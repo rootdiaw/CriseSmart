@@ -1,0 +1,31 @@
+
+   <div class="animated fadeIn" class="animated fadeIn" style="width: 30%;text-align: center; margin-left: 30%;">
+    <div class="card">
+        <div class="card-header">
+            <h1>Crise Sanitaire</h1>
+          </div>
+        <div class="card-body">
+            <form [formGroup]="secondFormGroup">
+              <p *ngIf="message!=null" style="color: red;font-size: 12pt;">{{message}}</p>
+              <mat-form-field >
+                <mat-label style="font-size: 12pt;">Fréquence * :</mat-label>
+                <select matNativeControl formControlName="frequence" >
+                      <option></option>
+                      <option value="Récurrente">Récurrente</option>
+                      <option value="Non récurrente">Non récurente </option>
+                      
+                    </select>
+            </mat-form-field>
+              <div >
+                <button mat-button  style="margin-left: -1%;"  [routerLink]="['/newsanitaire']"  class="btn-danger">retour</button>
+          
+                <button  mat-button (click)="newampleur()" 
+                class="btn btn-info" >suivant</button>
+           
+              </div>
+            </form>
+           
+      </div>
+             
+            </div>
+   </div>

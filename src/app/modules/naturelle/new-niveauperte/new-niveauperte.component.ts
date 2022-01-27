@@ -39,7 +39,7 @@ newperte(){
     const dialogRef = this.dialog.open(FicheactionComponent,
       {
         width: '23%',
-        height: '80%',
+        height: '87%',
         data: {
 
         },}

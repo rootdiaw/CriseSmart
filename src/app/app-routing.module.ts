@@ -7,6 +7,16 @@ import { NewFrequenceComponent } from './modules/naturelle/new-frequence/new-fre
 import { NewNaturelleComponent } from './modules/naturelle/new-naturelle/new-naturelle.component';
 import { NewNiveaucontroleComponent } from './modules/naturelle/new-niveaucontrole/new-niveaucontrole.component';
 import { NewNiveauperteComponent } from './modules/naturelle/new-niveauperte/new-niveauperte.component';
+import { NewAmpleursanitaireComponent } from './modules/sanitaire/new-ampleursanitaire/new-ampleursanitaire.component';
+import { NewFrequencesanitaireComponent } from './modules/sanitaire/new-frequencesanitaire/new-frequencesanitaire.component';
+import { NewNiveauconrtrolesanitaireComponent } from './modules/sanitaire/new-niveauconrtrolesanitaire/new-niveauconrtrolesanitaire.component';
+import { NewNiveaupertesanitaireComponent } from './modules/sanitaire/new-niveaupertesanitaire/new-niveaupertesanitaire.component';
+import { NewSanitaireComponent } from './modules/sanitaire/new-sanitaire/new-sanitaire.component';
+import { NewAmpleursecuritaireComponent } from './modules/securitaire/new-ampleursecuritaire/new-ampleursecuritaire.component';
+import { NewFrequencesecuritaireComponent } from './modules/securitaire/new-frequencesecuritaire/new-frequencesecuritaire.component';
+import { NewNiveauconrtrolesecuritaireComponent } from './modules/securitaire/new-niveauconrtrolesecuritaire/new-niveauconrtrolesecuritaire.component';
+import { NewNiveaupertesecuritaireComponent } from './modules/securitaire/new-niveaupertesecuritaire/new-niveaupertesecuritaire.component';
+import { NewSecuritaireComponent } from './modules/securitaire/new-securitaire/new-securitaire.component';
 import {FooterComponent} from './shared/footer/footer.component';
 
 const routes: Routes = [
@@ -32,6 +42,7 @@ const routes: Routes = [
           }
         ]
       }
+      /*  CATASTROPHE NATURELLE */
       ,
       {
         path:'faq',
@@ -54,6 +65,52 @@ const routes: Routes = [
       {
         path:'perte',
         component:NewNiveauperteComponent
+      }
+       /*  CATASTROPHE SANITAIRE */
+       ,
+      {
+        path:'newsanitaire',
+        component:NewSanitaireComponent
+      }
+      ,
+      {
+        path:'frequencesanitaire',
+        component:NewFrequencesanitaireComponent
+      }  ,
+      {
+        path:'ampleursanitaire',
+        component:NewAmpleursanitaireComponent
+      },
+      {
+        path:'controlesanitaire',
+        component:NewNiveauconrtrolesanitaireComponent
+      },
+      {
+        path:'pertesanitaire',
+        component:NewNiveaupertesanitaireComponent
+      }
+       /*  CATASTROPHE SECURITAIRE */
+       ,
+      {
+        path:'newsecuritaire',
+        component:NewSecuritaireComponent
+      }
+      ,
+      {
+        path:'frequencesecuritaire',
+        component:NewFrequencesecuritaireComponent
+      }  ,
+      {
+        path:'ampleursecuritaire',
+        component:NewAmpleursecuritaireComponent
+      },
+      {
+        path:'controlesecuritaire',
+        component:NewNiveauconrtrolesecuritaireComponent
+      },
+      {
+        path:'pertesecuritaire',
+        component:NewNiveaupertesecuritaireComponent
       }
     ]
   }
